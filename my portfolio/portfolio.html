@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal portfolio website</title>
+<link rel="stylesheet" href="portfolio.css">
+<script src="https://kit.fontawesome.com/54d8908c5f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+     <div class="container">
+        <nav>
+            <img src="logo2.png" alt="suhani parmar" class="logo">
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Services</a></li>
+               <li><a href="#">portfolio</a></li>
+               <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+         <p>Developer</p>
+         <h1>Hi, I'm Suhani Parmar <br> <span>TECH</span> Enthusiast<span> !</span></h1>
+        </div>
+     </div> 
+  </div>
+  <!-------------------------  about  ------------------------------>
+
+  <div id="about">
+   <div class="container">
+      <div class="row">
+          <div class="about-col-1">
+             <img src="MYPHOTO2.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>I'm IT Enthusiast, a dedicated programmer with an insatiable curiosity for all things tech.
+               As a IT student, I've honed my skills in Programming and Problem Solving.
+               I thrive in dynamic environments where creativity and problem-solving intersect. 
+               Beyond work, I enjoy Graphic Designing and video editing.Thank you for visiting, and I look forward to connecting with you.
+            </p>
+            <div class="tab-titles">
+               <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+               <p class="tab-links active1" onclick="opentab('experience',)">Experience</p>
+               <p class="tab-links active2" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+               <ul>
+                  <li><span>C/C++</span><br>4 star in C & 5 star in C++ on HackerRank</li>
+                  <li><span>JAVA</span><br>completed certified java basics and java advanced on CodeChef</li>
+                  <li><span>PYTHON</span><br>completed certified python basics on CodeChef</li>
+                  <li><span>problem-solving</span><br>solving daily problem of the day on GeeksForGeeks and
+                     earned 50+ geek bits</li>
+               </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+               <ul>
+                  <li><span>2023 - current</span><br>a C++ intern in CODSOFT</li>
+               </ul>
+            </div>
+            <div class="tab-contents" id="education">
+               <ul>
+                  
+                  <li><span>2022 - 2026</span><br>B.Tech in IT Engineering at Dharamsinh Desai University, Nadiad</li>
+                  <li><span>2020 - 2022</span><br>completed higher secondry at Shubham Global School, Rajkot</li>
+                  
+               </ul>
+            </div>
+          </div>
+      </div>
+
+   </div>
+  </div>
+ <!-------------------services-------------------------->
+ <div id="services">
+   <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+         <div>
+            <i class="fa-solid fa-laptop"></i>
+            <h2>Competitive Programming</h2>
+            <p>I'm deeply passionate about <br>competitive programming, driven by the thrill <br>of solving intricate algorithmic puzzles and consistently <br>pushing my problem-solving abilities to the limit.</p>
+            <a href="#">Learn more</a>
+         </div>
+         <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>I'm enthusiastic about <br>web development, where I blend creativity and <br>coding skills to craft interactive digital experiences <br> that seamlessly merge design with functionality.</p>
+            <a href="#">Learn more</a>
+         </div>
+         <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>Graphic Designing</h2>
+            <p>I'm drawn to graphic design <br>as a means of creating visual stories, <br> harmonizing aesthetics and communication to deliver impactful <br> messages through captivating visuals.</p>
+            <a href="#">Learn more</a>
+         </div>
+      </div>
+   </div>
+ </div>
+<!----------------portfolio------------------>
+ <!---------------contact------------->
+<div id="contact">
+   <div class="container">
+      <div class="row">
+        <div class="contact-left">
+           <h1 class="sub-title">Contact Me</h1>
+           <p><i class="fa-solid fa-envelope"></i>1008suhaniparmar@gmail.com</p>
+           <p><i class="fa-solid fa-square-phone"></i>7984636865</p>
+           <div class="social-icons">
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+           </div>
+        </div>
+        
+      </div>
+   </div>
+</div>
+
+
+  <script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+  </script>
+</body>
+</html>
